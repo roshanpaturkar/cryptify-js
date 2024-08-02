@@ -1,6 +1,6 @@
 {
   "name": "@types/cryptify-js",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "TypeScript definitions for cryptify-js",
   "homepage": "https://github.com/roshanpaturkar/cryptify-js/tree/main/types",
   "main": "",

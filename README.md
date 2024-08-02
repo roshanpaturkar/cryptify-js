@@ -36,6 +36,7 @@ openssl rsa -pubout -in private_key.pem -out public_key.pem
 base64 -i private_key.pem -o private_key_base64.txt
 # Convert Public Key to Base64
 base64 -i public_key.pem -o public_key_base64.txt
+```
 
 ## License
 This project is licensed under the MIT License.
