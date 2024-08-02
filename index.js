@@ -10,4 +10,4 @@
 const CRYPTIFYJS = require("./lib/cryptifyjs");
 
 // Exporting the CRYPTIFYJS module
-exports = module.exports = CRYPTIFYJS;
+module.exports = CRYPTIFYJS;
