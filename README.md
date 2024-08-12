@@ -27,15 +27,21 @@ It's tested with Nodejs & TypeScript, also supported in the browser. Tested in a
 
 ## Generating RSA Public and Private Key and Convert to Base64
 ```bash
-# Generate RSA Private Key
+# Generate RSA Private Key - Mac
 openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
-# Generate RSA Public Key
+
+# Generate RSA Public Key - Mac
 openssl rsa -pubout -in private_key.pem -out public_key.pem
 
-# Convert Private Key to Base64
+# Convert Private Key to Base64 - Mac
 base64 -i private_key.pem -o private_key_base64.txt
-# Convert Public Key to Base64
+# Linux
+base64 private_key.pem > private_key_base64.txt
+
+# Convert Public Key to Base64 - Mac
 base64 -i public_key.pem -o public_key_base64.txt
+# Linux
+base64 public_key.pem > public_key_base64.txt
 ```
 
 ## License
@@ -53,7 +59,7 @@ const Cryptify = require('cryptify-js');
 const cryptify = new Cryptify({
     publicKey: 'RSA PUBLIC KEY BASE64',
     privateKey: 'RSA PRIVATE KEY BASE64'
-)};
+});
 
 const data = {
     name: 'John Doe',
