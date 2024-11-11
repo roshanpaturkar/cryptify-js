@@ -1,6 +1,6 @@
 {
   "name": "cryptify-js",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "Cryptify JS is used to encrypt and decrypt data using custom AES & RSA algorithm.",
   "homepage": "https://github.com/roshanpaturkar/cryptify-js",
   "main": "index.js",

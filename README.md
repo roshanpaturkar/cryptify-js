@@ -8,6 +8,7 @@ It's tested with Nodejs & TypeScript, also supported in the browser. Tested in a
 - Encrypt and decrypt strings using AES-256-CBC & RSA algorithm.
 - Encrypt and decrypt objects.
 - Supported in Node.js, TypeScript, and the browser.
+- Cross-platform support added Golang. [cryptifygo](https://pkg.go.dev/github.com/roshanpaturkar/cryptifygo#section-readme)
 
 ## Encryption Approach
 - Generate a random key and iv for each encryption.
@@ -82,3 +83,17 @@ Encrypts the given data and returns the encrypted key, iv, and data.
 ### `decrypt(key: string, iv: string, data: string): any`
 Decrypts the given key, iv, and data and returns the decrypted data.
 
+### `encryptMessage(data: string): { key: string, iv: string, data: string }`
+Encrypts the given string data and returns the encrypted key, iv, and data.
+Thi method is useful when you want to encrypt data in cross-platform. You can encrypt data in one platform and decrypt it in another platform. For example, you can encrypt data in Node.js and decrypt it in Golang. [cryptifygo](https://pkg.go.dev/github.com/roshanpaturkar/cryptifygo#section-readme)
+
+### `decryptMessage(key: string, iv: string, data: string): string`
+Decrypts the given key, iv, and data and returns the decrypted string data.
+This method is useful when you want to decrypt data in cross-platform. You can encrypt data in one platform and decrypt it in another platform. For example, you can encrypt data in Node.js and decrypt it in Golang. [cryptifygo](https://pkg.go.dev/github.com/roshanpaturkar/cryptifygo#section-readme)
+
+
+### Cross Platform Compatibility Table
+| Platform | Compatible Version | Library |
+| --- | --- | --- |
+| Node.js | 2.0.0 | [cryptify-js](https://www.npmjs.com/package/cryptify-js)
+| Go | v1.0.7 | [cryptifygo](https://pkg.go.dev/github.com/roshanpaturkar/cryptifygo@v1.0.7#section-readme)
